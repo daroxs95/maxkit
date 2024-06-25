@@ -7,5 +7,11 @@
     "emitDeclarationOnly": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "src/App.tsx", "src/main.tsx", "src/stories"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/stories"
+  ]
 }
