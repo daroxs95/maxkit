@@ -35,4 +35,4 @@ jobs:
       - name: Bump version and publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: node ./scripts/release.js ${{ github.event.inputs.release_type }}
+        run: node ./scripts/release.mjs ${{ github.event.inputs.release_type }}
