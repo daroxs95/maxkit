@@ -9,7 +9,7 @@ const meta = {
   },
   // tags: ["autodocs"],
   args: {
-    children: "Text",
+    children: "Hello from supreme-kit",
   },
   // argTypes: {
   //   weight: { control: "color" },
@@ -20,8 +20,19 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Base: Story = {};
+
+export const BaseAs: Story = {
+  args: {
+    as: "h1",
+  },
+};
+
+export const Responsive: Story = {
   args: {
     as: "span",
+    lg: {
+      size: "4xl",
+    },
   },
 };

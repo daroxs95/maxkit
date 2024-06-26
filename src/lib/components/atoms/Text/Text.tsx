@@ -7,6 +7,17 @@ export function Text({
   weight,
   lineHeight,
   size,
+  marginBottom,
+  marginLeft,
+  marginRight,
+  marginTop,
+  paddingRight,
+  paddingTop,
+  paddingLeft,
+  paddingBottom,
+  padding,
+  margin,
+  lg,
   children,
 }: TextProps) {
   return (
@@ -16,6 +27,17 @@ export function Text({
       weight={weight}
       lineHeight={lineHeight}
       size={size}
+      marginBottom={marginBottom}
+      marginLeft={marginLeft}
+      marginRight={marginRight}
+      marginTop={marginTop}
+      paddingRight={paddingRight}
+      paddingTop={paddingTop}
+      paddingLeft={paddingLeft}
+      paddingBottom={paddingBottom}
+      padding={padding}
+      margin={margin}
+      lg={lg}
     >
       {children}
     </StyledText>
