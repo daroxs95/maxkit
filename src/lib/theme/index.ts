@@ -2,15 +2,19 @@ import { primitives, tokens, flatColors } from "../codegen/tokens.ts";
 
 type Primitives = typeof primitives;
 type DesignTokens = typeof tokens;
+type ComponentsTokens = DesignTokens["components"];
 type TypographyPrimitives = typeof primitives.typography;
-type SpacingPrimitives = typeof primitives.spacing;
-type ColorsPrimitives = keyof typeof flatColors;
+type SpacingPrimitives = Primitives["spacing"];
+type ColorsPrimitives = typeof flatColors;
+type CornerPrimitives = Primitives["corner"];
 
 const theme = {
   components: tokens.components,
+  text: tokens.text,
   typography: primitives.typography,
   spacing: primitives.spacing,
   colors: flatColors,
+  corners: primitives.corner,
 };
 
 type WithTheme<T> = {
@@ -24,5 +28,7 @@ export type {
   WithTheme,
   SpacingPrimitives,
   ColorsPrimitives,
+  CornerPrimitives,
+  ComponentsTokens,
 };
 export { theme };

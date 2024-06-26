@@ -8,6 +8,7 @@ export const StyledText = styled.p(
       typography = defaultTheme.typography,
       spacing = defaultTheme.spacing,
       colors = defaultTheme.colors,
+      text = defaultTheme.text,
     } = defaultTheme,
     weight = "500",
     lineHeight = "md",
@@ -42,7 +43,10 @@ export const StyledText = styled.p(
       paddingTop: paddingTop ? spacing[paddingTop] : undefined,
       paddingRight: paddingRight ? spacing[paddingRight] : undefined,
       paddingBottom: paddingBottom ? spacing[paddingBottom] : undefined,
-      color: color ? colors[color] : undefined,
+      color:
+        color && colors
+          ? colors[text[color] as keyof typeof colors]
+          : undefined,
       // boxSizing: "border-box",
       "@media (min-width: 425px) ": {
         fontSize: lg?.size ? typography.size[lg.size] : undefined,

@@ -1,4 +1,4 @@
-import { TypographyPrimitives, ColorsPrimitives } from "../../../theme";
+import { TypographyPrimitives, DesignTokens } from "../../../theme";
 import { SpacingStylesProps } from "../../../types/components";
 import { ReactNode } from "react";
 
@@ -9,7 +9,7 @@ interface TextStylesProps {
 }
 
 export interface TextProps extends TextStylesProps, SpacingStylesProps {
-  color?: ColorsPrimitives;
+  color?: keyof DesignTokens["text"];
   underline?: boolean;
   as?: "span" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   children: ReactNode | ReactNode[];

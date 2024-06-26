@@ -39,6 +39,6 @@ export const Responsive: Story = {
 
 export const Colored: Story = {
   args: {
-    color: "blue-05",
+    color: "primary-weaker",
   },
 };
