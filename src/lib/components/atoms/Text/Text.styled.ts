@@ -26,6 +26,7 @@ export const StyledText = styled.p(
     paddingBottom,
     lg,
     color,
+    transform,
   }: WithTheme<Omit<TextProps, "as" | "children">>) => {
     return {
       fontFamily: typography.font.family,
@@ -47,6 +48,7 @@ export const StyledText = styled.p(
         color && colors
           ? colors[text[color] as keyof typeof colors]
           : undefined,
+      textTransform: transform,
       // boxSizing: "border-box",
       "@media (min-width: 425px) ": {
         fontSize: lg?.size ? typography.size[lg.size] : undefined,

@@ -20,6 +20,7 @@ export function Text({
   lg,
   children,
   color = "primary",
+  transform,
 }: TextProps) {
   return (
     <StyledText
@@ -39,6 +40,7 @@ export function Text({
       paddingBottom={paddingBottom}
       padding={padding}
       margin={margin}
+      transform={transform}
       lg={lg}
     >
       {children}

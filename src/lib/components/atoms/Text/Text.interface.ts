@@ -1,6 +1,6 @@
 import { TypographyPrimitives, DesignTokens } from "../../../theme";
 import { SpacingStylesProps } from "../../../types/components";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 interface TextStylesProps {
   weight?: keyof TypographyPrimitives["weight"];
@@ -13,5 +13,6 @@ export interface TextProps extends TextStylesProps, SpacingStylesProps {
   underline?: boolean;
   as?: "span" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   children: ReactNode | ReactNode[];
+  transform?: CSSProperties["textTransform"];
   lg?: TextStylesProps & SpacingStylesProps;
 }

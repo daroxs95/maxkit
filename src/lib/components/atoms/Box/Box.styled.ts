@@ -33,8 +33,9 @@ export const StyledBox = styled.div(
     borderWidth,
     bg,
     cursor,
-    hover,
+    hoverStyles,
     disabledStyles,
+    activeStyles,
   }: WithTheme<Omit<BoxProps, "as" | "children">>) => {
     return {
       margin: margin ? spacing[margin] : undefined,
@@ -59,18 +60,23 @@ export const StyledBox = styled.div(
       borderWidth: borderWidth ? spacing[borderWidth] : undefined,
       backgroundColor: bg
         ? colors[surfaceColors[bg] as keyof typeof colors]
-        : undefined,
+        : "transparent",
       cursor: cursor ? cursor : undefined,
-      "&:hover:not(disabled)": {
-        backgroundColor: hover?.bg
-          ? colors[surfaceColors[hover?.bg] as keyof typeof colors]
-          : undefined,
+      "&:hover:not(:disabled)": {
+        backgroundColor: hoverStyles?.bg
+          ? colors[surfaceColors[hoverStyles?.bg] as keyof typeof colors]
+          : "transparent",
       },
       "&:disabled": {
         backgroundColor: disabledStyles?.bg
           ? colors[surfaceColors[disabledStyles?.bg] as keyof typeof colors]
-          : undefined,
+          : "transparent",
         cursor: disabledStyles?.cursor ? disabledStyles.cursor : undefined,
+      },
+      "&:active:not(:disabled)": {
+        backgroundColor: activeStyles?.bg
+          ? colors[surfaceColors[activeStyles?.bg] as keyof typeof colors]
+          : "transparent",
       },
       // boxSizing: "border-box",
       "@media (min-width: 425px) ": {

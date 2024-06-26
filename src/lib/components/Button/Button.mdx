@@ -1,0 +1,44 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Button.stories";
+
+<Meta of={Stories} />
+
+# Button
+
+<br />
+
+A button molecule component for generating complex organisms.
+
+## Usage with variants
+
+Variants like `primary`, `secondary`, `tertiary`, `danger` can be used to style the button. and convey meaning.
+
+<Canvas of={Stories.Base} />
+<Canvas of={Stories.Secondary} />
+<Canvas of={Stories.Tertiary} />
+<Canvas of={Stories.Danger} />
+
+## Listen to click events
+
+Using the `onClick` prop, you can listen to click events.
+
+<Canvas of={Stories.ClickEvent} />
+
+## Use small button
+
+A small button can be used in tight spaces via `small` prop.
+
+<Canvas of={Stories.Small} />
+
+## Disabled button
+
+A button can be disabled via `disabled` prop and this will render the `onClick` event ineffective.
+
+<Canvas of={Stories.Disabled} />
+
+## In forms
+
+A button can be used in forms to submit data, use the `type` prop to set the button type.
+
+<Canvas of={Stories.TypeSubmit} />

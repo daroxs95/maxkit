@@ -26,10 +26,13 @@ export function Box({
   justifyContent,
   gap,
   width,
-  hover,
+  hoverStyles,
   disabledStyles,
   cursor,
   disabled,
+  onClick,
+  activeStyles,
+  type,
   ...aria
 }: BoxProps) {
   return (
@@ -56,11 +59,14 @@ export function Box({
       justifyContent={justifyContent}
       gap={gap}
       width={width}
-      hover={hover}
+      hoverStyles={hoverStyles}
       disabledStyles={disabledStyles}
       lg={lg}
       cursor={cursor}
       disabled={disabled}
+      onClick={onClick}
+      activeStyles={activeStyles}
+      type={type}
       {...aria}
     >
       {children}

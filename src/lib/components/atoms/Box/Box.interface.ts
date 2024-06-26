@@ -2,12 +2,13 @@ import {
   CornerPrimitives,
   DesignTokens,
   SpacingPrimitives,
+  SurfaceTokens,
 } from "../../../theme";
-import { AriaAttributes, CSSProperties, ReactNode } from "react";
+import { AriaAttributes, CSSProperties, MouseEvent, ReactNode } from "react";
 import { SpacingStylesProps } from "../../../types/components.ts";
 
 interface HoverStylesProps {
-  bg?: keyof DesignTokens["surface"];
+  bg?: keyof SurfaceTokens;
 }
 
 interface DisabledStylesProps
@@ -47,7 +48,12 @@ export interface BoxProps
     | "button"
     | "a";
   lg?: BoxStylesProps & SpacingStylesProps;
-  hover?: HoverStylesProps;
+  hoverStyles?: HoverStylesProps;
   disabledStyles?: DisabledStylesProps;
   disabled?: boolean;
+  // TODO: Fix this type inferring the type based on as prop
+  onClick?: (e: MouseEvent<never>) => void;
+  activeStyles?: HoverStylesProps;
+  // TODO: Fix this type inferring the type based on as prop
+  type?: "button" | "submit" | "reset";
 }

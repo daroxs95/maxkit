@@ -15,8 +15,10 @@ const theme = {
   spacing: primitives.spacing,
   colors: flatColors,
   corners: primitives.corner,
-  surfaceColors: tokens.surface,
+  surfaceColors: { ...tokens.surface, ...tokens.components.button },
 };
+
+type SurfaceTokens = typeof theme.surfaceColors;
 
 type WithTheme<T> = {
   theme?: typeof theme;
@@ -31,5 +33,6 @@ export type {
   ColorsPrimitives,
   CornerPrimitives,
   ComponentsTokens,
+  SurfaceTokens,
 };
 export { theme };
