@@ -1,0 +1,27 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Paragraph.stories";
+
+<Meta of={Stories} />
+
+# Paragraph
+
+<br />
+
+A paragraph molecule component for generating complex organisms.
+
+## Usage
+
+<Canvas of={Stories.Base} />
+
+## Small variant
+
+<Canvas of={Stories.Small} />
+
+## Setting bold
+
+Default bold
+<Canvas of={Stories.Bold} />
+
+Small and bold
+<Canvas of={Stories.SmallBold} />
