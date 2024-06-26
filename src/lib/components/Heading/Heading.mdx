@@ -1,0 +1,25 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Heading.stories";
+
+<Meta of={Stories} />
+
+# Heading
+
+<br />
+
+A heading atom component for generating complex molecules.
+
+## Usage
+
+<Canvas of={Stories.Base} />
+
+## Changing level
+
+Native heading elements `h1`, `h2`, `h3`, `h4`, `h5`, and `h6` are supported bu `level` prop.
+
+<Canvas of={Stories.Small} />
+
+## Setting bold
+
+<Canvas of={Stories.Bold} />

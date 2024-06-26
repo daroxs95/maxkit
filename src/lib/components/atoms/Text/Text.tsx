@@ -19,7 +19,7 @@ export function Text({
   margin,
   lg,
   children,
-  color,
+  color = "primary",
 }: TextProps) {
   return (
     <StyledText

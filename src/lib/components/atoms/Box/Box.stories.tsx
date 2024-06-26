@@ -9,7 +9,7 @@ const meta = {
   },
   args: {
     children: "Hello from supreme-kit",
-    bg: "background-overlay",
+    bg: "background-invert",
   },
 } satisfies Meta<typeof Box>;
 
