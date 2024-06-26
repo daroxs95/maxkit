@@ -39,10 +39,8 @@ We manage node versions with NVM. Check the `.nvmrc` file for our current versio
 
 ## Component Development
 
-Create a new component following structure of atoms(`Text`)
+Create a new component following structure of atoms(`Box`)
 
 ## Release a Component
 
 - [Release Instructions](./Releasing.md)
-
-Godspeed and happy coding! 👽

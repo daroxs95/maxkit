@@ -38,17 +38,27 @@ function recursiveEval(obj, value) {
   return currentSegment;
 }
 
-function interpolatePrimitives(tokens, primitives, primitivesName) {
+function interpolatePrimitives(
+  tokens,
+  primitives,
+  primitivesName,
+  resolveToKey,
+) {
   Object.entries(tokens).forEach(([tokenName, value]) => {
     if (typeof value === "string") {
       const primitivePath = value.replace(/[{}]/g, "").split(".");
       const isPrimitiveReference = primitivePath[0] === primitivesName;
       if (isPrimitiveReference) {
         const primitiveAliasName = primitivePath.slice(1).join(".");
-        tokens[tokenName] = recursiveEval(primitives, primitiveAliasName);
+        const primitive = recursiveEval(primitives, primitiveAliasName);
+        if (primitive !== null) {
+          tokens[tokenName] = resolveToKey
+            ? primitivePath[primitivePath.length - 1]
+            : primitive;
+        }
       }
     } else if (typeof value === "object") {
-      interpolatePrimitives(value, primitives, primitivesName);
+      interpolatePrimitives(value, primitives, primitivesName, resolveToKey);
     }
   });
 }
@@ -58,7 +68,7 @@ const cleanedTokens = cleanTokens(tokens);
 const primitives = cleanedTokens["primitives"];
 const designTokens = cleanedTokens["tokens"];
 
-interpolatePrimitives(designTokens, primitives, "primitives");
+interpolatePrimitives(designTokens, primitives, "primitives", true);
 interpolatePrimitives(designTokens, designTokens, "tokens");
 
 fs.writeFileSync(cleanTokensOutput, JSON.stringify(cleanedTokens, null, 2), {
@@ -66,11 +76,16 @@ fs.writeFileSync(cleanTokensOutput, JSON.stringify(cleanedTokens, null, 2), {
   encoding: "utf-8",
 });
 
+const flatColors = Object.values(primitives.color).reduce((acc, color) => {
+  return { ...acc, ...color };
+}, {});
+
 fs.writeFileSync(
   codegenOutput,
   `// This file is auto-generated. Do not edit.
 export const tokens = ${JSON.stringify(designTokens, null, 2)};
 export const primitives = ${JSON.stringify(primitives, null, 2)};
+export const flatColors = ${JSON.stringify(flatColors, null, 2)};
 `,
   { flag: "w", encoding: "utf-8" },
 );
