@@ -1,5 +1,11 @@
+import { Text } from "./lib";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Text>Text</Text>
+    </>
+  );
 }
 
 export default App;
