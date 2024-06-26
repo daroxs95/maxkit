@@ -10,6 +10,7 @@ const theme = {
   components: tokens.components,
   typography: primitives.typography,
   spacing: primitives.spacing,
+  colors: flatColors,
 };
 
 type WithTheme<T> = {

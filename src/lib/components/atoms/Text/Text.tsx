@@ -19,10 +19,12 @@ export function Text({
   margin,
   lg,
   children,
+  color,
 }: TextProps) {
   return (
     <StyledText
       as={as}
+      color={color}
       underline={underline}
       weight={weight}
       lineHeight={lineHeight}
