@@ -15,6 +15,7 @@ const theme = {
   spacing: primitives.spacing,
   colors: flatColors,
   corners: primitives.corner,
+  surfaceColors: tokens.surface,
 };
 
 type WithTheme<T> = {

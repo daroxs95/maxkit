@@ -1,0 +1,31 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Box.stories";
+
+<Meta of={Stories} />
+
+# Box
+
+<br />
+
+A box atom component for generating complex molecules. (background color is for visibility)
+
+## Usage
+
+<Canvas of={Stories.Base} />
+
+## Changing underlying element
+
+Use the `as` prop to change the underlying element (following element is a button).
+
+<Canvas of={Stories.BaseAs} />
+
+## Responsive
+
+Use the `lg` prop to set styles for large screens.
+
+<Canvas of={Stories.Responsive} />
+
+## With custom sizing
+
+<Canvas of={Stories.CustomWidth} />
