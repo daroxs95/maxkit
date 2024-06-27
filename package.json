@@ -26,13 +26,13 @@
     "gen:tokens": "node scripts/tokens.mjs"
   },
   "dependencies": {
-    "nanoid": "^5.0.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "nanoid": "^5.0.7"
   },
   "peerDependencies": {
     "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5"
+    "@emotion/styled": "^11.11.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
