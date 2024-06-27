@@ -61,5 +61,6 @@ export const Error: Story = {
   args: {
     label: "Email",
     error: "Invalid email",
+    helperText: "We will never share your email",
   },
 };

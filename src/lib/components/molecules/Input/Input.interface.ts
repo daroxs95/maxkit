@@ -7,6 +7,6 @@ export interface InputProps extends AriaAttributes {
   label?: string;
   placeholder?: string;
   required?: boolean;
-  error?: string;
+  error?: boolean;
   helperText?: string;
 }

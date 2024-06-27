@@ -1,6 +1,7 @@
 import { InputProps } from "./Input.interface.ts";
 import { Box, Text } from "../../atoms";
 import { Stack } from "../../layout";
+import { HelpLabel } from "../HelpLabel";
 
 export function Input({
   disabled,
@@ -58,8 +59,10 @@ export function Input({
         color={disabled ? "disabled" : "primary"}
         size="md"
         weight="400"
+        width="100%"
         {...aria}
       />
+      {helperText && <HelpLabel text={helperText} error={error} />}
     </Stack>
   );
 }
