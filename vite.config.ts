@@ -15,5 +15,13 @@ export default defineConfig({
       name: "index",
       fileName: "index",
     },
+    rollupOptions: {
+      external: ["react"],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
+    },
   },
 });
