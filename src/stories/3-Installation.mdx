@@ -5,56 +5,68 @@ import { Meta } from "@storybook/blocks";
 <div>
   # Installation
 
-{" "}
+  <br />
+  <br />
 
-<br />
-<br />
+  ## Getting packages
 
-## Getting packages
+  Install ui toolkit library.
+  This is built on top of emotion.js but uses a default theme behind the scene.
+  Which is based on Supreme Design System tokens and primitives.
 
-Install ui toolkit library.
-This is built on top of emotion.js but uses a default theme behind the scene.
-Which is based on Supreme Design System tokens and primitives.
+  ```bash
+  npm install supreme-kit
+  ```
 
-```bash
-npm install supreme-kit
-```
+  ## Usage
 
-## Usage
+  Import and use components in a straightforward way
 
-Import and use components in a straightforward way
+  ```jsx
+  import { Button } from "supreme-kit";
 
-```jsx
-import { Button } from "supreme-kit";
+  function App() {
+    return <Button>Click me</Button>;
+  }
+  ```
 
-function App() {
-  return <Button>Click me</Button>;
-}
-```
+  ## Overriding theme
 
-## Overriding theme
+  You can override the default theme by providing a custom theme object to the `ThemeProvider` from emotion.
 
-You can override the default theme by providing a custom theme object to the `ThemeProvider` from emotion.
+  ```jsx
+  import { ThemeProvider } from "@emotion/react";
+  import { Button } from "supreme-kit";
 
-```jsx
-import { ThemeProvider } from "@emotion/react";
-import { Button } from "supreme-kit";
-
-const customTheme = {
-  components: {
-    button: {
-      "primary-default": "#002be7ff",
+  const customTheme = {
+    components: {
+      button: {
+        "primary-default": "#002be7ff",
+      },
     },
-  },
-};
+  };
 
-function App() {
-  return (
-    <ThemeProvider theme={customTheme}>
-      <Button>Click me</Button>
-    </ThemeProvider>
-  );
-}
-```
+  function App() {
+    return (
+      <ThemeProvider theme={customTheme}>
+        <Button>Click me</Button>
+      </ThemeProvider>
+    );
+  }
+  ```
+
+  ## Styles reset
+
+  For resetting browser styles and achieving correctness, put anywhere in the application:
+
+  ```tsx
+  import { Reset } from "supreme-kit";
+
+  function App() {
+    return (
+        <Reset />
+    );
+  }
+  ```
 
 </div>

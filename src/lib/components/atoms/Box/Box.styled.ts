@@ -40,7 +40,6 @@ export const StyledBox = styled.div(
     focusStyles,
   }: WithTheme<Omit<BoxProps, "as" | "children">>) => {
     return {
-      // boxSizing: "border-box",
       margin: margin ? spacing[margin] : undefined,
       marginLeft: marginLeft ? spacing[marginLeft] : undefined,
       marginTop: marginTop ? spacing[marginTop] : undefined,

@@ -44,6 +44,7 @@ export function Heading({ level = 1, children, bold, ...aria }: HeadingProps) {
       size={levelToSize[level - 1]}
       weight={bold ? levelToWeightB[level - 1] : levelToWeight[level - 1]}
       lineHeight={levelToLineHeight[level - 1]}
+      marginBottom="space-70"
       {...aria}
     >
       {children}

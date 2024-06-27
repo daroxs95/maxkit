@@ -18,6 +18,7 @@ export function Flex({ justify, vertical, gap, children, align }: FlexProps) {
       gap={gap}
       alignItems={align}
       justifyContent={justify}
+      marginBottom="space-70"
     >
       {children}
     </Box>

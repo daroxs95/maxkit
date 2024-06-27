@@ -1,22 +1,32 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Stack } from "./Stack";
-import { Box } from "../../atoms";
+import { Box, Text } from "../../atoms";
 
 const meta = {
   title: "Components/Layout/Stack",
   component: Stack,
   parameters: {
-    layout: "centered",
+    // layout: "centered",
   },
   args: {
     gap: "space-60",
     children: (
       <>
-        <Box bg="background-brand">Item 1</Box>
-        <Box bg="background-brand">Item 2</Box>
-        <Box bg="background-brand">Item 3</Box>
-        <Box bg="background-brand">Item 4</Box>
-        <Box bg="background-brand">Item 5</Box>
+        <Box bg="background-brand-tertiary">
+          <Text>Item 1</Text>
+        </Box>
+        <Box bg="background-brand-tertiary">
+          <Text>Item 2 bigger</Text>
+        </Box>
+        <Box bg="background-brand-tertiary">
+          <Text>Item 3</Text>
+        </Box>
+        <Box bg="background-brand-tertiary">
+          <Text>Item 4</Text>
+        </Box>
+        <Box bg="background-brand-tertiary">
+          <Text>Item 5</Text>
+        </Box>
       </>
     ),
   },
