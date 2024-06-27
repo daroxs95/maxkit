@@ -7,7 +7,10 @@ function App() {
         <Box width="500px">
           <Heading>Text</Heading>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            <Paragraph inline bold>
+              Lorem
+            </Paragraph>{" "}
+            ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             consectetur, ligula eget tincidunt facilisis, nunc ex ultricies
             purus, nec eleifend purus felis quis metus. Nullam nec eros nec
             ligula fermentum consectetur. Donec id risus ac erat ultricies
