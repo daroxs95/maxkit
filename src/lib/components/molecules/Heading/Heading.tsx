@@ -38,13 +38,20 @@ const levelToLineHeight: (keyof TypographyPrimitives["line-height"])[] = [
   "sm",
 ];
 
-export function Heading({ level = 1, children, bold, ...aria }: HeadingProps) {
+export function Heading({
+  level = 1,
+  children,
+  bold,
+  inverted,
+  ...aria
+}: HeadingProps) {
   return (
     <Text
       size={levelToSize[level - 1]}
       weight={bold ? levelToWeightB[level - 1] : levelToWeight[level - 1]}
       lineHeight={levelToLineHeight[level - 1]}
       marginBottom="space-70"
+      color={inverted ? "invert" : "primary"}
       {...aria}
     >
       {children}

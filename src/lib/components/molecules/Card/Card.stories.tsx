@@ -49,3 +49,28 @@ export const CanHover: Story = {
     canHover: true,
   },
 };
+
+export const Inverted: Story = {
+  args: {
+    withPadding: true,
+    canHover: true,
+    inverted: true,
+    children: (
+      <Stack vertical>
+        <Heading inverted level={2}>
+          Card Title
+        </Heading>
+        <Paragraph small inverted>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          vehicula, odio nec lacinia fermentum, nisl libero tincidunt metus, nec
+          aliquam nunc risus in metus.
+        </Paragraph>
+        <Box width="100%">
+          <Flex justify="end">
+            <Button>Action</Button>
+          </Flex>
+        </Box>
+      </Stack>
+    ),
+  },
+};

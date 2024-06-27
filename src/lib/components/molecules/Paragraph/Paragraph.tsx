@@ -6,6 +6,7 @@ export function Paragraph({
   children,
   bold,
   inline,
+  inverted,
   ...aria
 }: ParagraphProps) {
   return (
@@ -15,6 +16,7 @@ export function Paragraph({
       weight={bold ? (small ? "500" : "600") : small ? "400" : "500"}
       lineHeight={small ? "md" : "lg"}
       marginBottom={inline ? "space-0" : "space-70"}
+      color={inverted ? "invert" : "primary"}
       {...aria}
     >
       {children}

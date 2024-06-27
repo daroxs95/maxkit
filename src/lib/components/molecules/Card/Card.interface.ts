@@ -5,4 +5,5 @@ export interface CardProps extends AriaAttributes {
   children: ReactNode | ReactNode[];
   onClick?: () => void;
   canHover?: boolean;
+  inverted?: boolean;
 }

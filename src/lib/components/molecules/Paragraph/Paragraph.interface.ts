@@ -5,4 +5,5 @@ export interface ParagraphProps extends AriaAttributes {
   bold?: boolean;
   small?: boolean;
   inline?: boolean;
+  inverted?: boolean;
 }

@@ -63,6 +63,19 @@ function App() {
 }
 ```
 
+## Font loading
+
+For loading fonts, use the following snippet in the `head` tag of the `index.html` file:
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+```
+
 ## Links
 
 [Contribution guidelines](./doc/Contributing.md)
