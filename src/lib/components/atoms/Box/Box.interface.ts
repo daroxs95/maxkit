@@ -20,23 +20,28 @@ interface BoxStylesProps
     CSSProperties,
     | "display"
     | "flexDirection"
-    | "gap"
     | "width"
     | "height"
     | "alignItems"
     | "justifyContent"
-  > {}
+  > {
+  gap?: keyof SpacingPrimitives;
+}
+
+interface BorderStyleProps {
+  borderRadius?: keyof CornerPrimitives;
+  borderColor?: keyof DesignTokens["border"];
+  borderWidth?: keyof SpacingPrimitives;
+}
 
 export interface BoxProps
   extends BoxStylesProps,
     SpacingStylesProps,
     AriaAttributes,
     HoverStylesProps,
-    DisabledStylesProps {
-  borderRadius?: keyof CornerPrimitives;
-  borderColor?: keyof DesignTokens["border"];
-  borderWidth?: keyof SpacingPrimitives;
-  children: ReactNode | ReactNode[];
+    DisabledStylesProps,
+    BorderStyleProps {
+  children?: ReactNode | ReactNode[];
   as?:
     | "div"
     | "section"
@@ -54,6 +59,7 @@ export interface BoxProps
   // TODO: Fix this type inferring the type based on as prop
   onClick?: (e: MouseEvent<never>) => void;
   activeStyles?: HoverStylesProps;
+  focusStyles?: HoverStylesProps & BorderStyleProps;
   // TODO: Fix this type inferring the type based on as prop
   type?: "button" | "submit" | "reset";
 }

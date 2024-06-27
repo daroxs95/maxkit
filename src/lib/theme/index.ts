@@ -16,6 +16,7 @@ const theme = {
   colors: flatColors,
   corners: primitives.corner,
   surfaceColors: { ...tokens.surface, ...tokens.components.button },
+  borders: tokens.border,
 };
 
 type SurfaceTokens = typeof theme.surfaceColors;

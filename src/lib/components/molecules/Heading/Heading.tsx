@@ -1,6 +1,6 @@
-import { HeadingProps } from "./Heading.interface";
-import { Text } from "../atoms";
-import { TypographyPrimitives } from "../../theme";
+import { HeadingProps } from "./Heading.interface.ts";
+import { Text } from "../../atoms";
+import { TypographyPrimitives } from "../../../theme";
 
 const levelToSize: (keyof TypographyPrimitives["size"])[] = [
   "5xl",

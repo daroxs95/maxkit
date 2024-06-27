@@ -33,6 +33,7 @@ export function Box({
   onClick,
   activeStyles,
   type,
+  focusStyles,
   ...aria
 }: BoxProps) {
   return (
@@ -67,6 +68,7 @@ export function Box({
       onClick={onClick}
       activeStyles={activeStyles}
       type={type}
+      focusStyles={focusStyles}
       {...aria}
     >
       {children}

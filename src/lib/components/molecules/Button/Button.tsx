@@ -1,6 +1,6 @@
-import { ButtonProps, ButtonVariants } from "./Button.interface";
-import { Box, Text } from "../atoms";
-import { DesignTokens } from "../../theme";
+import { ButtonProps, ButtonVariants } from "./Button.interface.ts";
+import { Box, Text } from "../../atoms";
+import { DesignTokens } from "../../../theme";
 
 const variantToBg: Record<
   ButtonVariants,
@@ -42,6 +42,26 @@ const variantToActiveBg: Record<
   danger: "destructive-press",
 };
 
+const variantToFocusBorder: Record<
+  ButtonVariants,
+  keyof DesignTokens["border"] | undefined
+> = {
+  primary: "primary",
+  secondary: "secondary",
+  tertiary: "secondary",
+  danger: "destructive",
+};
+
+const variantToFocusBg: Record<
+  ButtonVariants,
+  keyof DesignTokens["components"]["button"] | undefined
+> = {
+  primary: "primary-focus",
+  secondary: "secondary-press",
+  tertiary: "tertiary-all",
+  danger: "destructive-focus",
+};
+
 export function Button({
   variant = "primary",
   children,
@@ -55,7 +75,7 @@ export function Button({
     <Box
       as="button"
       bg={variantToBg[variant]}
-      borderRadius="radius-10"
+      borderRadius="radius-20"
       paddingLeft={small ? "space-60" : "space-70"}
       paddingTop={"space-30"}
       paddingRight={small ? "space-60" : "space-70"}
@@ -70,6 +90,11 @@ export function Button({
         bg: variantToActiveBg[variant],
       }}
       type={type}
+      focusStyles={{
+        borderColor: variantToFocusBorder[variant],
+        bg: variantToFocusBg[variant],
+      }}
+      borderWidth="space-10"
       {...aria}
     >
       <Text

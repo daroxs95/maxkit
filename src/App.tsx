@@ -1,10 +1,14 @@
-import { Box, Text } from "./lib";
+import { Box, Button, Reset, Text } from "./lib";
 
 function App() {
   return (
-    <Box display="flex">
-      <Text>Text</Text>
-    </Box>
+    <>
+      <Reset />
+      <Box display="flex" bg="background-primary-strong">
+        <Text>Text</Text>
+        <Button>Button</Button>
+      </Box>
+    </>
   );
 }
 

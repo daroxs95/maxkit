@@ -1,5 +1,5 @@
 import { ParagraphProps } from "./Paragraph.interface.ts";
-import { Text } from "../atoms";
+import { Text } from "../../atoms";
 
 export function Paragraph({ small, children, bold, ...aria }: ParagraphProps) {
   return (

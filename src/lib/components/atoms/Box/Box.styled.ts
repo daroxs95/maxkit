@@ -9,6 +9,7 @@ export const StyledBox = styled.div(
       corners = defaultTheme.corners,
       surfaceColors = defaultTheme.surfaceColors,
       colors = defaultTheme.colors,
+      borders = defaultTheme.borders,
     } = defaultTheme,
     margin,
     marginLeft,
@@ -36,8 +37,10 @@ export const StyledBox = styled.div(
     hoverStyles,
     disabledStyles,
     activeStyles,
+    focusStyles,
   }: WithTheme<Omit<BoxProps, "as" | "children">>) => {
     return {
+      // boxSizing: "border-box",
       margin: margin ? spacing[margin] : undefined,
       marginLeft: marginLeft ? spacing[marginLeft] : undefined,
       marginTop: marginTop ? spacing[marginTop] : undefined,
@@ -55,9 +58,12 @@ export const StyledBox = styled.div(
       alignItems: alignItems ? alignItems : undefined,
       flexDirection: flexDirection ? flexDirection : undefined,
       display: display ? display : undefined,
-      gap: gap ? gap : undefined,
-      borderColor: borderColor ? borderColor : undefined,
+      gap: gap ? spacing[gap] : undefined,
+      borderColor: borderColor
+        ? colors[borders[borderColor] as keyof typeof colors]
+        : "transparent",
       borderWidth: borderWidth ? spacing[borderWidth] : undefined,
+      borderStyle: "solid",
       backgroundColor: bg
         ? colors[surfaceColors[bg] as keyof typeof colors]
         : "transparent",
@@ -65,12 +71,12 @@ export const StyledBox = styled.div(
       "&:hover:not(:disabled)": {
         backgroundColor: hoverStyles?.bg
           ? colors[surfaceColors[hoverStyles?.bg] as keyof typeof colors]
-          : "transparent",
+          : undefined,
       },
       "&:disabled": {
         backgroundColor: disabledStyles?.bg
           ? colors[surfaceColors[disabledStyles?.bg] as keyof typeof colors]
-          : "transparent",
+          : undefined,
         cursor: disabledStyles?.cursor ? disabledStyles.cursor : undefined,
       },
       "&:active:not(:disabled)": {
@@ -78,7 +84,15 @@ export const StyledBox = styled.div(
           ? colors[surfaceColors[activeStyles?.bg] as keyof typeof colors]
           : "transparent",
       },
-      // boxSizing: "border-box",
+      "&:focus": {
+        outline: "none",
+        borderColor: focusStyles?.borderColor
+          ? colors[borders[focusStyles.borderColor] as keyof typeof colors]
+          : undefined,
+        backgroundColor: focusStyles?.bg
+          ? colors[surfaceColors[focusStyles.bg] as keyof typeof colors]
+          : undefined,
+      },
       "@media (min-width: 425px) ": {
         margin: lg?.margin ? spacing[lg.margin] : undefined,
         marginLeft: lg?.marginLeft ? spacing[lg.marginLeft] : undefined,
@@ -96,7 +110,7 @@ export const StyledBox = styled.div(
         flexDirection: lg?.flexDirection ? lg.flexDirection : undefined,
         alignItems: lg?.alignItems ? lg.alignItems : undefined,
         justifyContent: lg?.justifyContent ? lg.justifyContent : undefined,
-        gap: lg?.gap ? lg.gap : undefined,
+        gap: lg?.gap ? spacing[lg.gap] : undefined,
         width: lg?.width ? lg.width : undefined,
         height: lg?.height ? lg.height : undefined,
       },
