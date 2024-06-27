@@ -1597,7 +1597,7 @@
         },
         "destructive-hover": {
           "type": "color",
-          "value": "{tokens.surface.background-destructive stronger}",
+          "value": "{primitives.color.red.red-08}",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "mode": "Mode 1",
@@ -1610,7 +1610,7 @@
         },
         "destructive-press": {
           "type": "color",
-          "value": "{tokens.surface.background-destructive stronger}",
+          "value": "{primitives.color.red.red-08}",
           "extensions": {
             "org.lukasoppermann.figmaDesignTokens": {
               "mode": "Mode 1",
@@ -1630,6 +1630,19 @@
               "collection": "Tokens",
               "scopes": ["ALL_SCOPES"],
               "variableId": "VariableID:123:253",
+              "exportKey": "variables"
+            }
+          }
+        },
+        "destructive": {
+          "type": "color",
+          "value": "{primitives.color.red.red-06}",
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "mode": "Mode 1",
+              "collection": "Tokens",
+              "scopes": ["ALL_SCOPES"],
+              "variableId": "VariableID:493:752",
               "exportKey": "variables"
             }
           }

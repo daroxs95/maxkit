@@ -4,6 +4,7 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
+  "types": "dist/types/src/lib/index.d.ts",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "files": [

@@ -12,9 +12,10 @@ export const tokens = {
       "secondary-press": "grey-01",
       "tertiary-all": "blue-overlay",
       "destructive-default": "red-02",
-      "destructive-hover": "red-03",
-      "destructive-press": "red-03",
+      "destructive-hover": "red-08",
+      "destructive-press": "red-08",
       "destructive-focus": "red-09",
+      destructive: "red-06",
     },
   },
   surface: {

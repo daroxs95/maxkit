@@ -9,7 +9,7 @@ const variantToBg: Record<
   primary: "primary-default",
   secondary: "secondary-default",
   tertiary: undefined,
-  danger: "destructive-default",
+  danger: "destructive",
 };
 
 const variantToHoverBg: Record<
