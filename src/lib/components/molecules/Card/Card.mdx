@@ -1,0 +1,27 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Card.stories";
+
+<Meta of={Stories} />
+
+# Card
+
+<br />
+
+A card molecule component for generating complex organisms.
+
+## Usage
+
+<Canvas of={Stories.Base} />
+
+## With padding
+
+A card can be padded via `withPadding` prop.
+
+<Canvas of={Stories.WithPadding} />
+
+## With hover effect
+
+A card can have hover effect via `canHover` prop. ⚠️ Card with hover effect are also focusable.
+
+<Canvas of={Stories.CanHover} />

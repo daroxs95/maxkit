@@ -43,6 +43,7 @@ export function Box({
   weight,
   size,
   lineHeight,
+  tabIndex,
   ...aria
 }: BoxProps) {
   return (
@@ -87,6 +88,7 @@ export function Box({
       weight={weight}
       size={size}
       lineHeight={lineHeight}
+      tabIndex={tabIndex}
       {...aria}
     >
       {children}

@@ -87,4 +87,5 @@ export interface BoxProps
   disabled?: boolean;
   focusStyles?: HoverStylesProps & BorderStyleProps;
   id?: string;
+  tabIndex?: number;
 }
