@@ -13,7 +13,8 @@
         "blue-09": "#00115cff",
         "blue-10": "#00082eff",
         "blue-11": "#000519ff",
-        "blue-overlay": "#0022b84d"
+        "blue-overlay": "#0022b84d",
+        "blue-overlay 2": "#2846c866"
       },
       "red": {
         "red-01": "#fef2f1ff",
@@ -169,10 +170,11 @@
       "background-primary-stronger": "blue-10",
       "background-disabled weak": "grey-04",
       "background-informative": "blue-02",
-      "background-warning": "{primitives.color.\byellow.yellow02}",
+      "background-warning": "yellow02",
       "background-informative-stronger": "blue-03",
       "background-success-stronger": "green-03",
-      "background-warning-stronger": "{primitives.color.\byellow.yellow04}"
+      "background-warning-stronger": "yellow04",
+      "background-overlay-hover": "blue-overlay 2"
     },
     "border": {
       "primary": "blue-04",
@@ -180,7 +182,7 @@
       "destructive": "red-06",
       "primary-stronger": "blue-05",
       "invert": "grey-01",
-      "warning": "{primitives.color.\byellow.yellow04}",
+      "warning": "yellow04",
       "destructive-secondary": "red-04",
       "success": "green-06",
       "informative": "blue-06"
@@ -196,7 +198,7 @@
       "disabled": "grey-06",
       "primary-on-fill-stronger": "blue-06",
       "primary-on-fill": "blue-04",
-      "warning-on-fill": "{primitives.color.\byellow.yellow09}",
+      "warning-on-fill": "yellow09",
       "destructive-on-fill": "red-08",
       "success-on-fill": "green-07",
       "informative-on-fill": "blue-06"
@@ -208,7 +210,7 @@
       "disabled": "grey-06",
       "hover-selected": "blue-05",
       "destructive-on-fill": "red-08",
-      "warning-on-fill": "{primitives.color.\byellow.yellow09}",
+      "warning-on-fill": "yellow09",
       "success-on-fill": "green-07",
       "informative-on-fill": "blue-06"
     },
@@ -219,16 +221,16 @@
       "corner-radius-badge": "radius-10"
     },
     "spacing": {
-      "component-edge-to-text-30": "{primitives.\bspacing.space-30}",
-      "component-edge-to-text-40": "{primitives.\bspacing.space-40}",
-      "component-edge-to-text-50": "{primitives.\bspacing.space-50}",
-      "component-edge-to-text-60": "{primitives.\bspacing.space-60}",
-      "component-edge-to-text-70": "{primitives.\bspacing.space-70}",
-      "icon-to-text": "{primitives.\bspacing.space-30}",
-      "component-edge-to-text-20": "{primitives.\bspacing.space-20}",
-      "tags-gap": "{primitives.\bspacing.space-20}",
-      "label-placeholder-gap": "{primitives.\bspacing.space-30}",
-      "header-to-body": "{primitives.\bspacing.space-30}"
+      "component-edge-to-text-30": "space-30",
+      "component-edge-to-text-40": "space-40",
+      "component-edge-to-text-50": "space-50",
+      "component-edge-to-text-60": "space-60",
+      "component-edge-to-text-70": "space-70",
+      "icon-to-text": "space-30",
+      "component-edge-to-text-20": "space-20",
+      "tags-gap": "space-20",
+      "label-placeholder-gap": "space-30",
+      "header-to-body": "space-30"
     }
   }
 }

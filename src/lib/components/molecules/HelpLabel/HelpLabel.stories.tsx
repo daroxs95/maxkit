@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { HelpLabel } from "./HelpLabel.tsx";
+import { HelpLabel } from "./HelpLabel";
 
 const meta = {
   title: "Components/Form/HelpLabel",

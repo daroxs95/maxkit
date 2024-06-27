@@ -169,6 +169,20 @@
               "exportKey": "variables"
             }
           }
+        },
+        "blue-overlay 2": {
+          "type": "color",
+          "value": "#2846c866",
+          "blendMode": "normal",
+          "extensions": {
+            "org.lukasoppermann.figmaDesignTokens": {
+              "mode": "Mode 1",
+              "collection": "Primitives",
+              "scopes": ["ALL_SCOPES"],
+              "variableId": "VariableID:407:1095",
+              "exportKey": "variables"
+            }
+          }
         }
       },
       "red": {
@@ -1905,6 +1919,19 @@
             "collection": "Tokens",
             "scopes": ["ALL_SCOPES"],
             "variableId": "VariableID:381:674",
+            "exportKey": "variables"
+          }
+        }
+      },
+      "background-overlay-hover": {
+        "type": "color",
+        "value": "{primitives.color.blue.blue-overlay 2}",
+        "extensions": {
+          "org.lukasoppermann.figmaDesignTokens": {
+            "mode": "Mode 1",
+            "collection": "Tokens",
+            "scopes": ["ALL_SCOPES"],
+            "variableId": "VariableID:407:1094",
             "exportKey": "variables"
           }
         }

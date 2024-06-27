@@ -1,0 +1,24 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Badge.stories";
+
+<Meta of={Stories} />
+
+# Badge
+
+<br />
+
+A Badge molecule component for generating complex organisms.
+
+## Usage
+
+<Canvas of={Stories.Base} />
+
+## Variants
+
+Variants like `neutral`, `info`, `success`, `error` and `danger` can be used to style the badge and convey meaning via `variant` prop.
+
+<Canvas of={Stories.Error} />
+<Canvas of={Stories.Info} />
+<Canvas of={Stories.Success} />
+<Canvas of={Stories.Warning} />

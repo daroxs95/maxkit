@@ -89,7 +89,7 @@ export const StyledBox = styled.div(
           : undefined,
         borderColor: hoverStyles?.borderColor
           ? colors[borders[hoverStyles?.borderColor] as keyof typeof colors]
-          : "transparent",
+          : undefined,
       },
       "&:disabled": {
         backgroundColor: disabledStyles?.bg

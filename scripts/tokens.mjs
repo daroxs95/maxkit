@@ -10,10 +10,9 @@ function cleanTokens(tokens) {
     const cleanName = tokenName.replace("\b", "");
 
     if (value && typeof value === "object" && !Array.isArray(value)) {
-      if (
-        typeof value["value"] === "string" ||
-        typeof value["value"] === "number"
-      ) {
+      if (typeof value["value"] === "string") {
+        cleanedTokens[cleanName] = value["value"].replace("\b", "");
+      } else if (typeof value["value"] === "number") {
         cleanedTokens[cleanName] = value["value"];
       } else {
         const nestedTokens = cleanTokens(value);
