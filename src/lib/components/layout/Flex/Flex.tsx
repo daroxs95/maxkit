@@ -8,9 +8,17 @@ interface FlexProps {
   gap?: keyof SpacingPrimitives;
   align?: CSSProperties["alignItems"];
   justify?: CSSProperties["justifyContent"];
+  noMarginBottom?: boolean;
 }
 
-export function Flex({ justify, vertical, gap, children, align }: FlexProps) {
+export function Flex({
+  justify,
+  vertical,
+  gap,
+  children,
+  align,
+  noMarginBottom,
+}: FlexProps) {
   return (
     <Box
       display="flex"
@@ -18,7 +26,7 @@ export function Flex({ justify, vertical, gap, children, align }: FlexProps) {
       gap={gap}
       alignItems={align}
       justifyContent={justify}
-      marginBottom="space-70"
+      marginBottom={noMarginBottom ? "space-0" : "space-70"}
     >
       {children}
     </Box>

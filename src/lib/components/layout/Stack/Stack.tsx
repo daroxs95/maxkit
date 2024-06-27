@@ -6,11 +6,17 @@ interface StackProps {
   children: ReactNode | ReactNode[];
   vertical?: boolean;
   gap?: keyof SpacingPrimitives;
+  noMarginBottom?: boolean;
 }
 
-export function Stack({ vertical, gap, children }: StackProps) {
+export function Stack({ vertical, gap, children, noMarginBottom }: StackProps) {
   return (
-    <Flex vertical={vertical} gap={gap} align={vertical ? "start" : undefined}>
+    <Flex
+      noMarginBottom={noMarginBottom}
+      vertical={vertical}
+      gap={gap}
+      align={vertical ? "start" : undefined}
+    >
       {children}
     </Flex>
   );

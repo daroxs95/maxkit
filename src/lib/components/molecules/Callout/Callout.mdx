@@ -1,0 +1,23 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Callout.stories";
+
+<Meta of={Stories} />
+
+# Callout
+
+<br />
+
+A callout molecule component for generating complex organisms.
+
+## Usage
+
+<Canvas of={Stories.Base} />
+
+## Variants
+
+Variants like `info`, `success`, `error` and `danger` can be used to style the badge and convey meaning via `variant` prop.
+
+<Canvas of={Stories.Error} />
+<Canvas of={Stories.Success} />
+<Canvas of={Stories.Warning} />
