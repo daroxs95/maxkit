@@ -6,7 +6,7 @@ export function Paragraph({ small, children, bold, ...aria }: ParagraphProps) {
     <Text
       size={small ? "sm" : "md"}
       weight={bold ? (small ? "400" : "500") : small ? "500" : "600"}
-      lineHeight={small ? "sm" : "md"}
+      lineHeight={small ? "md" : "lg"}
       marginBottom="space-70"
       {...aria}
     >

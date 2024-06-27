@@ -38,6 +38,11 @@ export function Box({
   value,
   required,
   onChange,
+  id,
+  color,
+  weight,
+  size,
+  lineHeight,
   ...aria
 }: BoxProps) {
   return (
@@ -77,6 +82,11 @@ export function Box({
       value={value}
       required={required}
       onChange={onChange}
+      id={id}
+      color={color}
+      weight={weight}
+      size={size}
+      lineHeight={lineHeight}
       {...aria}
     >
       {children}

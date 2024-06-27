@@ -6,7 +6,7 @@ function App() {
       <Flex vertical align="center">
         <Box width="500px">
           <Heading>Text</Heading>
-          <Paragraph small>
+          <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             consectetur, ligula eget tincidunt facilisis, nunc ex ultricies
             purus, nec eleifend purus felis quis metus. Nullam nec eros nec

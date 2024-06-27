@@ -78,10 +78,13 @@ export interface BoxProps
     | "footer"
     | "button"
     | "a"
-    | "input";
+    | "input"
+    | "ol"
+    | "ul";
   lg?: BoxStylesProps & SpacingStylesProps;
   hoverStyles?: HoverStylesProps & BorderStyleProps;
   disabledStyles?: DisabledStylesProps;
   disabled?: boolean;
   focusStyles?: HoverStylesProps & BorderStyleProps;
+  id?: string;
 }

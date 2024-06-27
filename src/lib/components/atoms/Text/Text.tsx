@@ -21,9 +21,13 @@ export function Text({
   children,
   color = "primary",
   transform,
+  htmlFor,
+  id,
 }: TextProps) {
   return (
     <StyledText
+      id={id}
+      htmlFor={htmlFor}
       as={as}
       color={color}
       underline={underline}

@@ -2,6 +2,7 @@ import { InputProps } from "./Input.interface.ts";
 import { Box, Text } from "../../atoms";
 import { Stack } from "../../layout";
 import { HelpLabel } from "../HelpLabel";
+import { nanoid } from "nanoid";
 
 export function Input({
   disabled,
@@ -14,10 +15,16 @@ export function Input({
   helperText,
   ...aria
 }: InputProps) {
+  const id = nanoid();
+  const helperId = `${id}-helper`;
+
+  const { "aria-describedby": ariaDescribedBy, ...ariaRest } = aria;
   return (
     <Stack vertical>
       {label && (
         <Text
+          as="label"
+          htmlFor={id}
           padding="space-0"
           margin="space-0"
           weight="600"
@@ -30,6 +37,7 @@ export function Input({
         </Text>
       )}
       <Box
+        id={id}
         as="input"
         bg="background-primary-stronger"
         borderRadius="radius-20"
@@ -60,9 +68,12 @@ export function Input({
         size="md"
         weight="400"
         width="100%"
-        {...aria}
+        aria-describedby={ariaDescribedBy || helperId}
+        {...ariaRest}
       />
-      {helperText && <HelpLabel text={helperText} error={error} />}
+      {helperText && (
+        <HelpLabel text={helperText} error={error} id={helperId} />
+      )}
     </Stack>
   );
 }

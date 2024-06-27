@@ -10,25 +10,23 @@ const meta = {
   },
   args: {
     gap: "space-60",
-    children: (
-      <>
-        <Box bg="background-brand-tertiary">
-          <Text>Item 1</Text>
-        </Box>
-        <Box bg="background-brand-tertiary">
-          <Text>Item 2 bigger</Text>
-        </Box>
-        <Box bg="background-brand-tertiary">
-          <Text>Item 3</Text>
-        </Box>
-        <Box bg="background-brand-tertiary">
-          <Text>Item 4</Text>
-        </Box>
-        <Box bg="background-brand-tertiary">
-          <Text>Item 5</Text>
-        </Box>
-      </>
-    ),
+    children: [
+      <Box bg="background-brand-tertiary">
+        <Text>Item 1</Text>
+      </Box>,
+      <Box bg="background-brand-tertiary">
+        <Text>Item 2 bigger</Text>
+      </Box>,
+      <Box bg="background-brand-tertiary">
+        <Text>Item 3</Text>
+      </Box>,
+      <Box bg="background-brand-tertiary">
+        <Text>Item 4</Text>
+      </Box>,
+      <Box bg="background-brand-tertiary">
+        <Text>Item 5</Text>
+      </Box>,
+    ],
   },
 } satisfies Meta<typeof Stack>;
 
