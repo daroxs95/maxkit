@@ -10,6 +10,8 @@ export const StyledBox = styled.div(
       surfaceColors = defaultTheme.surfaceColors,
       colors = defaultTheme.colors,
       borders = defaultTheme.borders,
+      typography = defaultTheme.typography,
+      text = defaultTheme.text,
     } = defaultTheme,
     margin,
     marginLeft,
@@ -38,8 +40,22 @@ export const StyledBox = styled.div(
     disabledStyles,
     activeStyles,
     focusStyles,
+    lineHeight,
+    weight,
+    size,
+    color,
   }: WithTheme<Omit<BoxProps, "as" | "children">>) => {
     return {
+      fontFamily: typography.font.family,
+      fontSize: size ? typography.size[size] : undefined,
+      lineHeight: lineHeight
+        ? typography["line-height"][lineHeight] + "px"
+        : undefined,
+      fontWeight: weight ? typography.weight[weight] : undefined,
+      color:
+        color && colors
+          ? colors[text[color] as keyof typeof colors]
+          : undefined,
       margin: margin ? spacing[margin] : undefined,
       marginLeft: marginLeft ? spacing[marginLeft] : undefined,
       marginTop: marginTop ? spacing[marginTop] : undefined,
@@ -67,10 +83,13 @@ export const StyledBox = styled.div(
         ? colors[surfaceColors[bg] as keyof typeof colors]
         : "transparent",
       cursor: cursor ? cursor : undefined,
-      "&:hover:not(:disabled)": {
+      "&:hover:not(:disabled):not(:focus)": {
         backgroundColor: hoverStyles?.bg
           ? colors[surfaceColors[hoverStyles?.bg] as keyof typeof colors]
           : undefined,
+        borderColor: hoverStyles?.borderColor
+          ? colors[borders[hoverStyles?.borderColor] as keyof typeof colors]
+          : "transparent",
       },
       "&:disabled": {
         backgroundColor: disabledStyles?.bg
@@ -81,7 +100,10 @@ export const StyledBox = styled.div(
       "&:active:not(:disabled)": {
         backgroundColor: activeStyles?.bg
           ? colors[surfaceColors[activeStyles?.bg] as keyof typeof colors]
-          : "transparent",
+          : undefined,
+        borderColor: activeStyles?.borderColor
+          ? colors[borders[activeStyles?.borderColor] as keyof typeof colors]
+          : undefined,
       },
       "&:focus": {
         outline: "none",
@@ -91,6 +113,18 @@ export const StyledBox = styled.div(
         backgroundColor: focusStyles?.bg
           ? colors[surfaceColors[focusStyles.bg] as keyof typeof colors]
           : undefined,
+      },
+      "&::placeholder": {
+        fontFamily: typography.font.family,
+        fontSize: size ? typography.size[size] : undefined,
+        lineHeight: lineHeight
+          ? typography["line-height"][lineHeight] + "px"
+          : undefined,
+        fontWeight: weight ? typography.weight[weight] : undefined,
+        color:
+          color && colors
+            ? colors[text[color] as keyof typeof colors]
+            : undefined,
       },
       "@media (min-width: 425px) ": {
         margin: lg?.margin ? spacing[lg.margin] : undefined,

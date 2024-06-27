@@ -49,7 +49,6 @@ export const StyledText = styled.p(
           ? colors[text[color] as keyof typeof colors]
           : undefined,
       textTransform: transform,
-      // boxSizing: "border-box",
       "@media (min-width: 425px) ": {
         fontSize: lg?.size ? typography.size[lg.size] : undefined,
         lineHeight: lg?.lineHeight

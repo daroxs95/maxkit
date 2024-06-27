@@ -1,0 +1,53 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Input.stories";
+
+<Meta of={Stories} />
+
+# Input
+
+<br />
+
+An input molecule component for generating complex organisms.
+
+## Usage
+
+<Canvas of={Stories.Base} />
+
+## Listen to change events
+
+Using the `onChange` prop, you can listen to change events.
+
+<Canvas of={Stories.Value} />
+
+## Using label
+
+A label can be used to describe the input field.
+
+<Canvas of={Stories.Labeled} />
+
+## With helper text
+
+A helper text can be used to provide additional information about the input field.
+
+<Canvas of={Stories.Helper} />
+
+
+## Required
+
+An input can be marked as required via `required` prop.
+
+<Canvas of={Stories.Required} />
+
+
+## Error state
+
+An input can be in error state via `error` prop.
+
+<Canvas of={Stories.Error} />
+
+## Disabling input
+
+An input can be disabled via `disabled` prop.
+
+<Canvas of={Stories.Disabled} />

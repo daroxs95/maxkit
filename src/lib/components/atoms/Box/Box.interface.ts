@@ -4,8 +4,17 @@ import {
   SpacingPrimitives,
   SurfaceTokens,
 } from "../../../theme";
-import { AriaAttributes, CSSProperties, MouseEvent, ReactNode } from "react";
-import { SpacingStylesProps } from "../../../types/components.ts";
+import {
+  AriaAttributes,
+  ChangeEvent,
+  CSSProperties,
+  MouseEvent,
+  ReactNode,
+} from "react";
+import {
+  SpacingStylesProps,
+  TextStylesProps,
+} from "../../../types/components.ts";
 
 interface HoverStylesProps {
   bg?: keyof SurfaceTokens;
@@ -34,13 +43,30 @@ interface BorderStyleProps {
   borderWidth?: keyof SpacingPrimitives;
 }
 
+interface InputProps {
+  value?: string;
+  placeholder?: string;
+  required?: boolean;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+interface ButtonProps {
+  onClick?: (e: MouseEvent<never>) => void;
+  type?: "button" | "submit" | "reset";
+  activeStyles?: HoverStylesProps & BorderStyleProps;
+}
+
 export interface BoxProps
   extends BoxStylesProps,
     SpacingStylesProps,
     AriaAttributes,
     HoverStylesProps,
     DisabledStylesProps,
-    BorderStyleProps {
+    BorderStyleProps,
+    // TODO: Fix this type inferring the type based on as prop
+    InputProps,
+    ButtonProps,
+    TextStylesProps {
   children?: ReactNode | ReactNode[];
   as?:
     | "div"
@@ -51,15 +77,11 @@ export interface BoxProps
     | "header"
     | "footer"
     | "button"
-    | "a";
+    | "a"
+    | "input";
   lg?: BoxStylesProps & SpacingStylesProps;
-  hoverStyles?: HoverStylesProps;
+  hoverStyles?: HoverStylesProps & BorderStyleProps;
   disabledStyles?: DisabledStylesProps;
   disabled?: boolean;
-  // TODO: Fix this type inferring the type based on as prop
-  onClick?: (e: MouseEvent<never>) => void;
-  activeStyles?: HoverStylesProps;
   focusStyles?: HoverStylesProps & BorderStyleProps;
-  // TODO: Fix this type inferring the type based on as prop
-  type?: "button" | "submit" | "reset";
 }

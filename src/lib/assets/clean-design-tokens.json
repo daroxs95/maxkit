@@ -144,9 +144,9 @@
         "secondary-hover": "grey-01",
         "secondary-press": "grey-01",
         "tertiary-all": "blue-overlay",
-        "destructive-default": "red-06",
-        "destructive-hover": "red-08",
-        "destructive-press": "red-08",
+        "destructive-default": "red-02",
+        "destructive-hover": "red-03",
+        "destructive-press": "red-03",
         "destructive-focus": "red-09"
       }
     },
@@ -157,24 +157,33 @@
       "background-invert": "grey-01",
       "background-invert-stronger": "grey-02",
       "background-invert-strongest": "grey-03",
-      "background-destructive": "red-06",
-      "background-success": "green-08",
+      "background-destructive": "red-02",
+      "background-success": "green-01",
       "background-brand": "blue-06",
       "background-brand-secondary": "blue-07",
       "background-disabled": "grey-06",
       "background-brand-tertiary": "blue-08",
       "background-overlay": "blue-overlay",
-      "background-destructive stronger": "red-08",
+      "background-destructive stronger": "red-03",
       "background-destructive strongest": "red-09",
       "background-primary-stronger": "blue-10",
-      "background-disabled weak": "grey-04"
+      "background-disabled weak": "grey-04",
+      "background-informative": "blue-02",
+      "background-warning": "{primitives.color.\byellow.yellow02}",
+      "background-informative-stronger": "blue-03",
+      "background-success-stronger": "green-03",
+      "background-warning-stronger": "{primitives.color.\byellow.yellow04}"
     },
     "border": {
       "primary": "blue-04",
       "secondary": "grey-04",
       "destructive": "red-06",
       "primary-stronger": "blue-05",
-      "invert": "grey-01"
+      "invert": "grey-01",
+      "warning": "{primitives.color.\byellow.yellow04}",
+      "destructive-secondary": "red-04",
+      "success": "green-06",
+      "informative": "blue-06"
     },
     "text": {
       "primary": "grey-01",
@@ -184,11 +193,42 @@
       "invert-weaker": "grey-06",
       "primary-weaker": "grey-04",
       "destructive": "red-06",
-      "disabled": "grey-06"
+      "disabled": "grey-06",
+      "primary-on-fill-stronger": "blue-06",
+      "primary-on-fill": "blue-04",
+      "warning-on-fill": "{primitives.color.\byellow.yellow09}",
+      "destructive-on-fill": "red-08",
+      "success-on-fill": "green-07",
+      "informative-on-fill": "blue-06"
     },
     "icon": {
       "destructive": "red-06",
-      "primary": "grey-01"
+      "primary": "grey-01",
+      "default": "blue-11",
+      "disabled": "grey-06",
+      "hover-selected": "blue-05",
+      "destructive-on-fill": "red-08",
+      "warning-on-fill": "{primitives.color.\byellow.yellow09}",
+      "success-on-fill": "green-07",
+      "informative-on-fill": "blue-06"
+    },
+    "corner": {
+      "corner-radius-placeholder": "radius-20",
+      "corner-radius-button": "radius-20",
+      "corner-radius-tags": "radius-full",
+      "corner-radius-badge": "radius-10"
+    },
+    "spacing": {
+      "component-edge-to-text-30": "{primitives.\bspacing.space-30}",
+      "component-edge-to-text-40": "{primitives.\bspacing.space-40}",
+      "component-edge-to-text-50": "{primitives.\bspacing.space-50}",
+      "component-edge-to-text-60": "{primitives.\bspacing.space-60}",
+      "component-edge-to-text-70": "{primitives.\bspacing.space-70}",
+      "icon-to-text": "{primitives.\bspacing.space-30}",
+      "component-edge-to-text-20": "{primitives.\bspacing.space-20}",
+      "tags-gap": "{primitives.\bspacing.space-20}",
+      "label-placeholder-gap": "{primitives.\bspacing.space-30}",
+      "header-to-body": "{primitives.\bspacing.space-30}"
     }
   }
 }

@@ -34,6 +34,10 @@ export function Box({
   activeStyles,
   type,
   focusStyles,
+  placeholder,
+  value,
+  required,
+  onChange,
   ...aria
 }: BoxProps) {
   return (
@@ -69,6 +73,10 @@ export function Box({
       activeStyles={activeStyles}
       type={type}
       focusStyles={focusStyles}
+      placeholder={placeholder}
+      value={value}
+      required={required}
+      onChange={onChange}
       {...aria}
     >
       {children}

@@ -52,15 +52,14 @@ function App() {
 ```
 
 ## Styles reset
+
 For resetting browser styles and achieving correctness, put anywhere in the application:
 
 ```tsx
 import { Reset } from "supreme-kit";
 
 function App() {
-  return (
-      <Reset />
-  );
+  return <Reset />;
 }
 ```
 

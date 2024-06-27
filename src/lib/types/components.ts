@@ -1,4 +1,15 @@
-import { SpacingPrimitives } from "../theme";
+import {
+  DesignTokens,
+  SpacingPrimitives,
+  TypographyPrimitives,
+} from "../theme";
+
+export interface TextStylesProps {
+  weight?: keyof TypographyPrimitives["weight"];
+  size?: keyof TypographyPrimitives["size"];
+  lineHeight?: keyof TypographyPrimitives["line-height"];
+  color?: keyof DesignTokens["text"];
+}
 
 export interface SpacingStylesProps {
   margin?: keyof SpacingPrimitives;
