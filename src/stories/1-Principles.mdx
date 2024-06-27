@@ -1,4 +1,8 @@
 import { Meta } from "@storybook/blocks";
+import InclusiveImg from "./assets/inclusive.png";
+import BalanceImg from "./assets/balance.png";
+import EvolvingImg from "./assets/evolving.png";
+
 
 <Meta title="Principles" />
 
@@ -10,26 +14,42 @@ import { Meta } from "@storybook/blocks";
   <br />
   <br />
 
-
   Supreme is the design system developed to create accessible, cohesive, and high-quality user experiences on Max. It
   equips product designers and developers with essential tools and resources, facilitating the creation of consistent
   and engaging interfaces in Figma and React. Supreme streamlines the design and development process, ensuring that
   every element of the user interface reflects Max's core principles and enhances user engagement.
   HBO Max inspired design system and react components library as ui toolkit.
 
-  ### Inclusive
+  <br />
+  <br />
 
-  Make the platform appealing and accessible to all age groups, including families with children.
-  Seamless
-  Minimize friction and provide a seamless viewing experience.
 
-  ### Balanced
+  <div className="sb-features-grid">
+    <div>
+      <img src={InclusiveImg} />
+      ### Inclusive
 
-  Find and maintain the delicate balance between appealing to new audiences and maintaining a solid connection with
-  loyal customers.
+      Make the platform appealing and accessible to all age groups, including families with children.
+      Seamless
+      Minimize friction and provide a seamless viewing experience.
+    </div>
 
-  ### Evolving
+    <div>
+      <img src={BalanceImg} />
 
-  Embrace change to reflect the evolving nature of the platform while maintaining core brand values.
+      ### Balanced
+
+      Find and maintain the delicate balance between appealing to new audiences and maintaining a solid connection with
+      loyal customers.
+    </div>
+
+    <div>
+      <img src={EvolvingImg} />
+
+      ### Evolving
+
+      Embrace change to reflect the evolving nature of the platform while maintaining core brand values.
+    </div>
+  </div>
 
 </div>
