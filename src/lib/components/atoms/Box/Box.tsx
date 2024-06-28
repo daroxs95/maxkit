@@ -2,97 +2,25 @@ import { StyledBox } from "./Box.styled.ts";
 import { BoxProps } from "./Box.interface.ts";
 
 export function Box({
-  marginBottom,
-  marginLeft,
-  marginRight,
-  marginTop,
-  paddingRight,
-  paddingTop,
-  paddingLeft,
-  paddingBottom,
   padding = "space-0",
   margin = "space-0",
-  lg,
   children,
   as,
-  display,
-  borderColor,
-  borderRadius,
   borderWidth = "space-0",
-  flexDirection,
-  alignItems,
-  height,
-  bg,
-  justifyContent,
-  gap,
-  width,
-  hoverStyles,
-  disabledStyles,
-  cursor,
-  disabled,
-  onClick,
-  activeStyles,
   buttonType,
-  focusStyles,
-  placeholder,
-  value,
-  required,
-  onChange,
-  id,
-  color,
-  weight,
-  size,
-  lineHeight,
-  tabIndex,
   inputType,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   type,
-  ...aria
+  ...rest
 }: BoxProps) {
   return (
     <StyledBox
-      marginBottom={marginBottom}
-      marginLeft={marginLeft}
-      marginRight={marginRight}
-      marginTop={marginTop}
-      paddingRight={paddingRight}
-      paddingTop={paddingTop}
-      paddingLeft={paddingLeft}
-      paddingBottom={paddingBottom}
       padding={padding}
       margin={margin}
-      as={as}
-      display={display}
-      borderColor={borderColor}
-      borderRadius={borderRadius}
       borderWidth={borderWidth}
-      flexDirection={flexDirection}
-      alignItems={alignItems}
-      height={height}
-      bg={bg}
-      justifyContent={justifyContent}
-      gap={gap}
-      width={width}
-      hoverStyles={hoverStyles}
-      disabledStyles={disabledStyles}
-      lg={lg}
-      cursor={cursor}
-      disabled={disabled}
-      onClick={onClick}
-      activeStyles={activeStyles}
+      as={as}
       type={as === "button" ? buttonType : inputType}
-      focusStyles={focusStyles}
-      placeholder={placeholder}
-      value={value}
-      required={required}
-      onChange={onChange}
-      id={id}
-      color={color}
-      weight={weight}
-      size={size}
-      lineHeight={lineHeight}
-      tabIndex={tabIndex}
-      {...aria}
+      {...rest}
     >
       {children}
     </StyledBox>

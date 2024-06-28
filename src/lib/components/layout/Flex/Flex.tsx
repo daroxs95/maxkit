@@ -9,6 +9,7 @@ interface FlexProps {
   align?: CSSProperties["alignItems"];
   justify?: CSSProperties["justifyContent"];
   noMarginBottom?: boolean;
+  wrap?: boolean;
 }
 
 export function Flex({
@@ -18,6 +19,7 @@ export function Flex({
   children,
   align,
   noMarginBottom,
+  wrap,
 }: FlexProps) {
   return (
     <Box
@@ -27,6 +29,7 @@ export function Flex({
       alignItems={align}
       justifyContent={justify}
       marginBottom={noMarginBottom ? "space-0" : "space-70"}
+      flexWrap={wrap ? "wrap" : "nowrap"}
     >
       {children}
     </Box>

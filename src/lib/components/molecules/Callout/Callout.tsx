@@ -29,6 +29,7 @@ export function Callout({
       borderRadius="radius-20"
       padding="space-60"
       width="100%"
+      marginBottom="space-70"
       {...aria}
     >
       <Stack vertical gap="space-30" noMarginBottom>

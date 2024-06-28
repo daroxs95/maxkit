@@ -16,6 +16,7 @@ export function Stack({ vertical, gap, children, noMarginBottom }: StackProps) {
       vertical={vertical}
       gap={gap}
       align={vertical ? "start" : undefined}
+      wrap
     >
       {children}
     </Flex>

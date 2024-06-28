@@ -33,6 +33,12 @@ interface BoxStylesProps
     | "height"
     | "alignItems"
     | "justifyContent"
+    | "flexWrap"
+    | "flex"
+    | "minWidth"
+    | "maxWidth"
+    | "minHeight"
+    | "maxHeight"
   > {
   gap?: keyof SpacingPrimitives;
 }

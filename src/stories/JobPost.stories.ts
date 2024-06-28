@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Login } from "../Login";
+import { JobPost } from "../JobPost";
 
 const meta = {
-  title: "Example/Login",
-  component: Login,
+  title: "Example/JobPost",
+  component: JobPost,
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof Login>;
+} satisfies Meta<typeof JobPost>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoginStory: Story = {};
+export const Story: Story = {};

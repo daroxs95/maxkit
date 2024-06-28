@@ -44,8 +44,20 @@ export const StyledBox = styled.div(
     weight,
     size,
     color,
+    flexWrap,
+    flex,
+    maxWidth,
+    minWidth,
+    maxHeight,
+    minHeight,
   }: WithTheme<Omit<BoxProps, "as" | "children">>) => {
     return {
+      maxWidth: maxWidth,
+      minWidth: minWidth,
+      maxHeight: maxHeight,
+      minHeight: minHeight,
+      flexWrap: flexWrap,
+      flex: flex,
       fontFamily: typography.font.family,
       fontSize: size ? typography.size[size] : undefined,
       lineHeight: lineHeight

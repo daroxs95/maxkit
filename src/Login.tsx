@@ -8,10 +8,10 @@ import {
   Paragraph,
   Reset,
   Stack,
-} from "../lib";
+} from "./lib";
 import { useState } from "react";
 
-export const Login = () => {
+export const Login = ({ onLogin }: { onLogin?: () => void }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,7 +21,7 @@ export const Login = () => {
       <Reset />
 
       <Box
-        bg="background-primary-strong"
+        bg="background-primary-strongest"
         height="100vh"
         display="flex"
         alignItems="center"
@@ -32,7 +32,12 @@ export const Login = () => {
           <Flex vertical align="center">
             <Box width="500px">
               <Heading>Login</Heading>
-              <Box as="form">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (onLogin) onLogin();
+                }}
+              >
                 <Flex vertical noMarginBottom>
                   <Flex vertical>
                     <Input
@@ -67,7 +72,7 @@ export const Login = () => {
                     <Button type="submit">Login</Button>
                   </Stack>
                 </Flex>
-              </Box>
+              </form>
             </Box>
           </Flex>
         </Card>

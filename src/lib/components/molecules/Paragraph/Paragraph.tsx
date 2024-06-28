@@ -11,7 +11,7 @@ export function Paragraph({
 }: ParagraphProps) {
   return (
     <Text
-      as="span"
+      as={inline ? "span" : "p"}
       size={small ? "sm" : "md"}
       weight={bold ? (small ? "500" : "600") : small ? "400" : "500"}
       lineHeight={small ? "md" : "lg"}
