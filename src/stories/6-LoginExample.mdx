@@ -1,0 +1,19 @@
+import { Meta, Story } from "@storybook/blocks";
+
+import * as Stories from "./Login.stories";
+
+<Meta of={Stories} />
+
+<Story of={Stories.LoginStory} />
+
+<style>{`
+  .sbdocs-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .sbdocs-content {
+    max-width: 100%;
+  }
+`}
+</style>

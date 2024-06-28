@@ -48,11 +48,12 @@ interface InputProps {
   placeholder?: string;
   required?: boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  inputType?: "text" | "password" | "email" | "number";
 }
 
 interface ButtonProps {
   onClick?: (e: MouseEvent<never>) => void;
-  type?: "button" | "submit" | "reset";
+  buttonType?: "button" | "submit" | "reset";
   activeStyles?: HoverStylesProps & BorderStyleProps;
 }
 
@@ -80,7 +81,8 @@ export interface BoxProps
     | "a"
     | "input"
     | "ol"
-    | "ul";
+    | "ul"
+    | "form";
   lg?: BoxStylesProps & SpacingStylesProps;
   hoverStyles?: HoverStylesProps & BorderStyleProps;
   disabledStyles?: DisabledStylesProps;
@@ -88,4 +90,5 @@ export interface BoxProps
   focusStyles?: HoverStylesProps & BorderStyleProps;
   id?: string;
   tabIndex?: number;
+  type?: unknown;
 }

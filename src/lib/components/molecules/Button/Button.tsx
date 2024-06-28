@@ -89,7 +89,7 @@ export function Button({
       activeStyles={{
         bg: variantToActiveBg[variant],
       }}
-      type={type}
+      buttonType={type}
       focusStyles={{
         borderColor: variantToFocusBorder[variant],
         bg: variantToFocusBg[variant],

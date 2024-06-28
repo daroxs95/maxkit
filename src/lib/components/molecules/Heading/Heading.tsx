@@ -50,6 +50,7 @@ export function Heading({
       size={levelToSize[level - 1]}
       weight={bold ? levelToWeightB[level - 1] : levelToWeight[level - 1]}
       lineHeight={levelToLineHeight[level - 1]}
+      margin="space-0"
       marginBottom="space-70"
       color={inverted ? "invert" : "primary"}
       {...aria}

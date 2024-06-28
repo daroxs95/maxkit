@@ -8,11 +8,11 @@ export function HelpLabel({ error, text, id, ...aria }: HelpLabelProps) {
       size="sm"
       weight="400"
       lineHeight="sm"
-      marginBottom="space-0"
+      margin="space-0"
       color={error ? "destructive" : "primary-weaker"}
       {...aria}
     >
-      {text}
+      {text || <wbr />}
     </Text>
   );
 }

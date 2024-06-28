@@ -13,6 +13,7 @@ export function Input({
   onChange,
   error,
   helperText,
+  type,
   ...aria
 }: InputProps) {
   const id = nanoid();
@@ -69,9 +70,11 @@ export function Input({
         weight="400"
         width="100%"
         aria-describedby={ariaDescribedBy || helperId}
+        inputType={type}
+        marginBottom="space-30"
         {...ariaRest}
       />
-      {helperText && (
+      {helperText !== undefined && (
         <HelpLabel text={helperText} error={error} id={helperId} />
       )}
     </Stack>

@@ -9,4 +9,5 @@ export interface InputProps extends AriaAttributes {
   required?: boolean;
   error?: boolean;
   helperText?: string;
+  type?: "text" | "password" | "email" | "number";
 }

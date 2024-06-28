@@ -14,7 +14,7 @@ const meta = {
   },
   args: {
     children: (
-      <Stack vertical>
+      <Stack vertical noMarginBottom>
         <Heading level={2}>Card Title</Heading>
         <Paragraph small>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
@@ -22,7 +22,7 @@ const meta = {
           aliquam nunc risus in metus.
         </Paragraph>
         <Box width="100%">
-          <Flex justify="end">
+          <Flex justify="end" noMarginBottom>
             <Button variant="secondary">Action</Button>
           </Flex>
         </Box>
@@ -56,7 +56,7 @@ export const Inverted: Story = {
     canHover: true,
     inverted: true,
     children: (
-      <Stack vertical>
+      <Stack vertical noMarginBottom>
         <Heading inverted level={2}>
           Card Title
         </Heading>
@@ -66,7 +66,7 @@ export const Inverted: Story = {
           aliquam nunc risus in metus.
         </Paragraph>
         <Box width="100%">
-          <Flex justify="end">
+          <Flex justify="end" noMarginBottom>
             <Button>Action</Button>
           </Flex>
         </Box>

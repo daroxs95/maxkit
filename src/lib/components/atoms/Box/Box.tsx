@@ -32,7 +32,7 @@ export function Box({
   disabled,
   onClick,
   activeStyles,
-  type,
+  buttonType,
   focusStyles,
   placeholder,
   value,
@@ -44,6 +44,9 @@ export function Box({
   size,
   lineHeight,
   tabIndex,
+  inputType,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  type,
   ...aria
 }: BoxProps) {
   return (
@@ -77,7 +80,7 @@ export function Box({
       disabled={disabled}
       onClick={onClick}
       activeStyles={activeStyles}
-      type={type}
+      type={as === "button" ? buttonType : inputType}
       focusStyles={focusStyles}
       placeholder={placeholder}
       value={value}
