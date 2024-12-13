@@ -1,0 +1,19 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Stories from "./Grid.stories";
+
+<Meta of={Stories} />
+
+# Grid
+
+<br />
+
+A grid component for generating complex layout.
+
+## Multi-column element.
+
+<Canvas of={Stories.GridItem} />
+
+## Modifying spacing
+
+<Canvas of={Stories.GridGap} />

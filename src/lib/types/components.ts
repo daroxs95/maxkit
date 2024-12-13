@@ -22,4 +22,6 @@ export interface SpacingStylesProps {
   paddingBottom?: keyof SpacingPrimitives;
   paddingLeft?: keyof SpacingPrimitives;
   paddingRight?: keyof SpacingPrimitives;
+  rowGap?: keyof SpacingPrimitives;
+  columnGap?: keyof SpacingPrimitives;
 }

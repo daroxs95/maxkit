@@ -39,6 +39,9 @@ interface BoxStylesProps
     | "maxWidth"
     | "minHeight"
     | "maxHeight"
+    | "gridTemplateColumns"
+    | "gridColumn"
+    | "gridRow"
   > {
   gap?: keyof SpacingPrimitives;
 }

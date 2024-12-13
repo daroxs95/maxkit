@@ -50,6 +50,11 @@ export const StyledBox = styled.div(
     minWidth,
     maxHeight,
     minHeight,
+    gridRow,
+    gridColumn,
+    columnGap,
+    rowGap,
+    gridTemplateColumns,
   }: WithTheme<Omit<BoxProps, "as" | "children">>) => {
     return {
       maxWidth: maxWidth,
@@ -95,6 +100,13 @@ export const StyledBox = styled.div(
         ? colors[surfaceColors[bg] as keyof typeof colors]
         : "transparent",
       cursor: cursor ? cursor : undefined,
+      gridRow: gridRow ? gridRow : undefined,
+      gridColumn: gridColumn ? gridColumn : undefined,
+      columnGap: columnGap ? spacing[columnGap] : undefined,
+      rowGap: rowGap ? spacing[rowGap] : undefined,
+      gridTemplateColumns: gridTemplateColumns
+        ? gridTemplateColumns
+        : undefined,
       "&:hover:not(:disabled):not(:focus)": {
         backgroundColor: hoverStyles?.bg
           ? colors[surfaceColors[hoverStyles?.bg] as keyof typeof colors]
