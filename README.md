@@ -4,6 +4,9 @@ HBO Max inspired react components library.
 
 ![npm (tag)](https://img.shields.io/npm/v/supreme-kit/latest)
 
+## Requirements
+- React 19.0.0
+
 ## Installation
 
 Install ui toolkit library.
